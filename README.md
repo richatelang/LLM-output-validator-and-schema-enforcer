@@ -2,6 +2,8 @@
 
 A production-grade middleware layer that guarantees LLM responses match your expected Zod schema — or automatically corrects them with up to 3 self-healing retry attempts.
 
+Watch the full demo here: https://www.loom.com/share/6bf4136fe6f14564ac6bdd9b8af5400a
+
 ## Quick Start
 
 ```bash
