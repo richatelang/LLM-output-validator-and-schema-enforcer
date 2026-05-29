@@ -1,0 +1,37 @@
+{
+  "name": "llm-output-validator",
+  "version": "1.0.0",
+  "description": "Production-grade LLM output validator and schema enforcer with auto-correction via Gemini",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "start:prod": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "kill-port": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr :3000') do taskkill /F /PID %a 2>nul & echo Port 3000 cleared",
+    "restart": "npm run kill-port & npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "@google/generative-ai": "^0.24.1",
+    "better-sqlite3": "^12.10.0",
+    "dotenv": "^17.4.2",
+    "fastify": "^5.8.5",
+    "tsx": "^4.22.3",
+    "zod": "^3.25.76",
+    "zod-to-json-schema": "^3.25.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.4"
+  }
+}
